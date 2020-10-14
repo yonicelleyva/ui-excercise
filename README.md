@@ -4,7 +4,7 @@
 2. `cd ui-excercise`
 3. `npm install`
 4. `npm start` to run project
-5. `npm test` to run tests
+5. `npm run test` to run tests
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
