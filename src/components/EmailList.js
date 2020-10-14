@@ -52,7 +52,7 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
   };
 
   const getEmailPreview = (email) => {
-    const body = {__html: email.body.substring(0, 50)}
+    const body = {__html: email.body.substring(0, 60) + "..."}
     return (
       <div className={classes.emailPreview}>
         <div className={classes.subject}>{`${email.subject} ${email.sender}`}</div>
@@ -61,7 +61,7 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
         <div>
           {email.tags.map((tag, i) => <Chip key={i} className={classes.tags} variant="outlined" color="secondary" label={tag}/>)}
         </div>
-        <div className={classes.date}>{moment(email.date).format('MM-DD-YYYY')}</div>
+        <div className={classes.date}>{moment(email.date).format('LLLL')}</div>
       </div>
     )
   }

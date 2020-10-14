@@ -27,10 +27,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-function Sidebar({inboxEmails}) {
+function Sidebar({tags, inboxEmails}) {
   const classes = useStyles();
-  let tags = mockedEmails.messages.reduce((allTags, email) => allTags.concat(email.tags), []);
-  tags= [...new Set([...tags])];
 
   return (
     <>
