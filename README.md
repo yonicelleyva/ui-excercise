@@ -10,5 +10,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Links
 
-Running version of the application: [https://yonicelleyva.github.io/ui-excercise//](https://yonicelleyva.github.io/ui-excercise//)
-GitHub Repo: [https://github.com/yonicelleyva/ui-excercise/](https://github.com/yonicelleyva/ui-excercise/)
+1. Running version of the application: [https://yonicelleyva.github.io/ui-excercise//](https://yonicelleyva.github.io/ui-excercise//)
+2. GitHub Repo: [https://github.com/yonicelleyva/ui-excercise/](https://github.com/yonicelleyva/ui-excercise/)
