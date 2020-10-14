@@ -67,7 +67,7 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
   }
 
   return (
-    <List className={classes.root}>
+    <List className={classes.root} id="email-list">
       <div className={classes.toolbar} />
       {emails.map((email) => 
         <div key={email.id}>
@@ -82,7 +82,7 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
             </ListItemIcon>
             <ListItemText id={email.id} primary={getEmailPreview(email)} />
             <ListItemSecondaryAction>
-              <IconButton edge="end" onClick={() => onDeleteEmail({id: email.id})}>
+              <IconButton id={`delete-${email.id}`} edge="end" onClick={() => onDeleteEmail({id: email.id})}>
                 <DeleteIcon />
               </IconButton>
             </ListItemSecondaryAction>
