@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
 function Topbar({emailsSelected, onDeleteEmail}) {
   const classes = useStyles();
 
-  useEffect(() => {
-    console.log(emailsSelected)
-  }, [emailsSelected])
   return (
     <>
       <AppBar position="fixed" className={classes.appBar}>
