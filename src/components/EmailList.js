@@ -8,6 +8,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
+import Tooltip from '@material-ui/core/Tooltip';
 import Chip from '@material-ui/core/Chip';
 import DeleteIcon from '@material-ui/icons/Delete';
 import moment from "moment";
@@ -71,8 +72,8 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
       <div className={classes.toolbar} />
       {emails.map((email) => 
         <div key={email.id}>
-          <ListItem dense button onClick={() => handleToggle(email.id)}>
-            <ListItemIcon>
+          <ListItem dense button>
+            <ListItemIcon onClick={() => handleToggle(email.id)}>
               <Checkbox
                 edge="start"
                 checked={selectedEmails.includes(email.id)}
@@ -82,9 +83,11 @@ function EmailList({emails, selectedEmails, onDeleteEmail, onEmailsSelected, cle
             </ListItemIcon>
             <ListItemText id={email.id} primary={getEmailPreview(email)} />
             <ListItemSecondaryAction>
-              <IconButton id={`delete-${email.id}`} edge="end" onClick={() => onDeleteEmail({id: email.id})}>
-                <DeleteIcon />
-              </IconButton>
+              <Tooltip title="Delete">
+                <IconButton id={`delete-${email.id}`} edge="end" onClick={() => onDeleteEmail({id: email.id})}>
+                  <DeleteIcon />
+                </IconButton>
+              </Tooltip>
             </ListItemSecondaryAction>
           </ListItem>
           <Divider />

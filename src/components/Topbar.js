@@ -3,6 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -20,12 +21,12 @@ function Topbar({emailsSelected, onDeleteEmail}) {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-        {emailsSelected && 
-            <span>
+          {emailsSelected && 
+            <Tooltip title="Delete">
               <IconButton onClick={() => onDeleteEmail({deleteSelected: true})}>
                 <DeleteIcon />
               </IconButton>
-            </span>
+            </Tooltip>
           }
           {!emailsSelected && 
             <Typography variant="h6" noWrap>
